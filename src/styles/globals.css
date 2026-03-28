@@ -1,0 +1,110 @@
+:root {
+  --theme-transition: background-color var(--duration-medium) var(--ease-out-expo),
+                      color var(--duration-medium) var(--ease-out-expo),
+                      border-color var(--duration-medium) var(--ease-out-expo),
+                      fill var(--duration-medium) var(--ease-out-expo);
+  
+  color-scheme: light dark;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Base: All elements transition normally */
+body, body * {
+  transition: var(--theme-transition);
+}
+
+/* Guard: Mute theme properties during switch. 
+  We use explicit properties instead of the shorthand list to ensure 
+  the CSS parser doesn't choke on the commas/important flags.
+*/
+.is-switching-theme,
+.is-switching-theme * {
+  transition-property: transform, opacity !important;
+  transition-duration: 0.3s !important;
+  transition-timing-function: ease !important;
+  will-change: auto !important;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--on-surface);
+  font-family: var(--font-primary-local), sans-serif;
+  font-variation-settings: "wght" var(--fw-regular);
+  font-feature-settings: "ss01", "ss04";
+  line-height: var(--lh-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: none;
+  background-color: var(--background);
+  color: var(--on-surface);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  text-wrap: balance;
+}
+
+h1 {
+  font-variation-settings: "wght" var(--fw-black);
+  line-height: var(--lh-h1);
+  letter-spacing: var(--ls-h1);
+}
+
+h2, h3, h4, h5, h6 {
+  font-variation-settings: "wght" var(--fw-medium);
+}
+
+h2 {
+  line-height: var(--lh-h2);
+  letter-spacing: var(--ls-h2);
+}
+
+h3 {
+  font-variation-settings: "wght" var(--fw-medium);
+  line-height: var(--lh-h3);
+}
+
+p, li, blockquote {
+  text-wrap: pretty;
+}
+
+p, span, li, td, th, label, blockquote {
+  font-family: inherit;
+  font-variation-settings: "wght" var(--fw-regular);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-variation-settings: "wght" var(--fw-medium);
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-variation-settings: inherit;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

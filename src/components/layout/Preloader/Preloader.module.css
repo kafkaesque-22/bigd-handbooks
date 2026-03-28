@@ -1,0 +1,41 @@
+.container {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  will-change: opacity;
+  animation: fadeOut var(--duration-slow) var(--ease-out-expo) 0.5s forwards;
+}
+
+.logoEntrance {
+  width: 60px;
+  height: 60px;
+  color: var(--on-surface);
+  shape-rendering: geometricPrecision;
+  will-change: transform, opacity;
+  animation: popIn var(--duration-fast) var(--ease-out-expo) forwards;
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

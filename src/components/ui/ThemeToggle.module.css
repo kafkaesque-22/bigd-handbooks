@@ -1,0 +1,28 @@
+.circle {
+  display: flex;
+  width: 0.875rem;
+  height: 0.875rem;
+  padding: 0;
+  background-color: var(--on-surface);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform var(--duration-fast) var(--ease-out-expo),
+              background-color var(--duration-medium) var(--ease-out-expo);
+  will-change: transform;
+}
+
+@media (hover: hover) {
+  .circle:hover {
+    transform: scale(1.2);
+  }
+
+  .circle:active {
+    transform: scale(0.9);
+  }
+}
+
+.circle:disabled {
+  cursor: default;
+  pointer-events: none;
+}

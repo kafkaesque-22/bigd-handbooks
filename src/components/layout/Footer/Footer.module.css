@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--background);
+  contain: layout style;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: var(--max-width);
+  padding: var(--footer-padding) var(--page-gutter);
+}
+
+.text {
+  font-size: var(--fz-footer);
+  font-variation-settings: "wght" var(--fw-medium);
+  line-height: var(--lh-footer);
+  color: var(--on-surface-low);
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-wrap: balance;
+}

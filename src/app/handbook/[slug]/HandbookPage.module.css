@@ -1,0 +1,128 @@
+.prose {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* Headings */
+.prose h1, 
+.prose h2, 
+.prose h3 {
+  scroll-margin-top: calc(var(--header-height) + 3rem);
+  color: var(--on-surface);
+}
+
+.prose h1 {
+  font-size: var(--fz-h1);
+  font-variation-settings: "wght" var(--fw-black);
+  margin-bottom: 3rem;
+}
+
+.prose h2 {
+  font-size: var(--fz-h2);
+  font-variation-settings: "wght" var(--fw-medium);
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose h3 {
+  font-size: var(--fz-h3);
+  font-variation-settings: "wght" var(--fw-medium);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.prose p {
+  font-variation-settings: "wght" var(--fw-regular);
+  margin-bottom: 2rem;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--on-surface);
+  opacity: 0.15;
+  margin: 5rem 0;
+  width: 100%;
+}
+
+/* Tables */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4rem 0;
+  font-size: var(--fz-ui);
+  border-top: 1.5px solid var(--on-surface);
+}
+
+.prose th {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1.5px solid var(--on-surface);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-variation-settings: "wght" var(--fw-medium);
+}
+
+.prose td {
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--elevation);
+  font-variation-settings: "wght" var(--fw-regular);
+}
+/* Blockquotes */
+.prose blockquote {
+  margin: 5rem 0;
+  padding-left: 2rem;
+  border-left: 2px solid var(--on-surface);
+}
+
+.prose blockquote p {
+  font-size: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  line-height: 1.3;
+  font-style: italic;
+  color: var(--on-surface);
+  margin-bottom: 0;
+  font-variation-settings: "wght" var(--fw-regular);
+}
+
+/* Code & Syntax */
+.prose pre {
+  background-color: var(--elevation);
+  padding: 2rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 3rem 0;
+}
+
+.prose code {
+  font-family: ui-monospace, monospace;
+  font-size: 0.9em;
+  background-color: var(--elevation);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Lists */
+.prose ul, 
+.prose ol {
+  margin-bottom: 2.5rem;
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin-bottom: 1rem;
+  font-variation-settings: "wght" var(--fw-regular);
+}
+
+.prose li::marker {
+  color: var(--on-surface-low);
+}
+
+@media (max-width: 768px) {
+  .prose {
+    max-width: 100%;
+  }
+}

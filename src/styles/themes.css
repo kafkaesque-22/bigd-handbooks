@@ -1,0 +1,13 @@
+[data-theme='light'] {
+  --background: #f4f3f2;
+  --elevation: #e9e9e7;
+  --on-surface: #282829;
+  --on-surface-low: rgba(40, 40, 41, 0.6);
+}
+
+[data-theme='dark'] {
+  --background: #161617;
+  --elevation: #222224;
+  --on-surface: #e0e0e1;
+  --on-surface-low: rgba(224, 224, 225, 0.5);
+}
