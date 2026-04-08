@@ -20,7 +20,7 @@ const cardData = [
   { 
     id: 'card3', 
     title: 'Web Management', 
-    description: 'Practices for digital knowlegde hub.',
+    description: 'Practices for digital knowledge hub.',
     href: '/handbook/web-management' 
   }
 ];
