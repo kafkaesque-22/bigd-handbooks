@@ -56,7 +56,7 @@ const Hero = () => {
         </div>
         <div className={styles.introTwo}>
           <p>
-            Designed for clarity and consistency, these handbooks help our BIGD navigate complex editorial decisions and maintain a seamless identity across all platforms.
+            Designed for clarity and consistency, these handbooks help BIGD navigate complex editorial decisions and maintain a seamless identity across all platforms.
           </p>
         </div>
       </div>

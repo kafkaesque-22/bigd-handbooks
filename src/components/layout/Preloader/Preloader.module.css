@@ -7,7 +7,7 @@
   justify-content: center;
   background: var(--background);
   will-change: opacity;
-  animation: fadeOut var(--duration-slow) var(--ease-out-expo) 0.5s forwards;
+  animation: fadeOut var(--duration-slow) var(--ease-out-expo) 1s forwards;
 }
 
 .logoEntrance {
