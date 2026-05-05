@@ -28,8 +28,42 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: { default: 'BIGD Handbooks', template: '%s | BIGD Handbooks' },
-  description: 'A guide by Mihid Hasan.',
+  title: { 
+    default: 'BIGD Handbooks', 
+    template: '%s | BIGD Handbooks' 
+  },
+  description: 'The official digital repository for BIGD’s Editorial Style, Writing Principles, and Web Management guidelines. Developed and maintained by Mihid Hasan.',
+  metadataBase: new URL('https://bigd-handbooks.vercel.app'),
+  openGraph: {
+    title: 'BIGD Handbooks',
+    description: 'The official digital repository for BIGD’s Editorial Style, Writing Principles, and Web Management guidelines. Developed and maintained by Mihid Hasan.',
+    url: 'https://bigd-handbooks.vercel.app',
+    siteName: 'BIGD Handbooks',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'BIGD Handbooks: Editorial Style, Writing Principles, and Web Management',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'BIGD Handbooks',
+    description: 'The official digital repository for BIGD’s Editorial Style, Writing Principles, and Web Management guidelines. Developed and maintained by Mihid Hasan.',
+    images: ['/og.png'],
+  },
+  authors: [{ name: 'Mihid Hasan' }],
+  alternates: {
+    canonical: 'https://bigd-handbooks.vercel.app',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
