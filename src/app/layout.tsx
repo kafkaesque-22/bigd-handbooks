@@ -34,6 +34,14 @@ export const metadata: Metadata = {
   },
   description: 'The official digital repository for BIGD’s Editorial Style, Writing Principles, and Web Management guidelines. Developed and maintained by Mihid Hasan.',
   metadataBase: new URL('https://bigd-handbooks.vercel.app'),
+  alternates: {
+    canonical: 'https://bigd-handbooks.vercel.app',
+  },
+  authors: [{ name: 'Mihid Hasan' }],
+  // This points to the file you just created
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'BIGD Handbooks',
     description: 'The official digital repository for BIGD’s Editorial Style, Writing Principles, and Web Management guidelines. Developed and maintained by Mihid Hasan.',
@@ -55,10 +63,6 @@ export const metadata: Metadata = {
     title: 'BIGD Handbooks',
     description: 'The official digital repository for BIGD’s Editorial Style, Writing Principles, and Web Management guidelines. Developed and maintained by Mihid Hasan.',
     images: ['/og.png'],
-  },
-  authors: [{ name: 'Mihid Hasan' }],
-  alternates: {
-    canonical: 'https://bigd-handbooks.vercel.app',
   },
   robots: {
     index: true,
